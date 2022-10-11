@@ -18,7 +18,7 @@ const NavBar = () => {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-gray-100 flex items-center w-full py-3">
+    <nav className="bg-gray-200 flex items-center w-full py-3">
       <h1 className="text-xl font-bold ml-7">Quizee</h1>
       <div
         onClick={() => setOpen(!open)}
@@ -27,7 +27,7 @@ const NavBar = () => {
         {open ? <XMarkIcon></XMarkIcon> : <Bars3Icon></Bars3Icon>}
       </div>
       <ul
-        className={`bg-gray-100 md:flex w-full py-3 justify-center md:justify-end md:mr-7 md:py-0 absolute md:static duration-200 ease-in ${
+        className={`bg-gray-200 md:flex w-full py-3 justify-center md:justify-end md:mr-7 md:py-0 absolute md:static duration-200 ease-in ${
           open ? "top-12" : "top-[-200px]"
         }`}
       >
