@@ -10,7 +10,7 @@ const TopicHeader = () => {
           alt=""
         />
       </div>
-      <p className="text-5xl my-5">Select Your Topic</p>
+      <p className="text-3xl md:text-5xl mt-5">Select Your Quiz Topic</p>
     </div>
   );
 };
