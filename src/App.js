@@ -10,8 +10,16 @@ function App() {
       path: "/",
       element: <Header></Header>,
       children: [
-        { path: "/", element: <Topics></Topics> },
-        { path: "/topics", element: <Topics></Topics> },
+        {
+          path: "/",
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
+          element: <Topics></Topics>,
+        },
+        {
+          path: "/topics",
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
+          element: <Topics></Topics>,
+        },
         { path: "/blog", element: <Blog></Blog> },
       ],
     },
