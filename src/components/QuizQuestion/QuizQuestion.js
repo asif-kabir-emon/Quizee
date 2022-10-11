@@ -2,14 +2,13 @@ import React from "react";
 import { EyeIcon } from "@heroicons/react/24/solid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./QuizQuestion.css";
 
 const QuizQuestion = ({ quizQuestion }) => {
   const { question, options, id, correctAnswer } = quizQuestion;
   const parse = require("html-react-parser");
   const answerNotifier = () => toast(correctAnswer);
-  const correcAnswerNotifier = () => toast.success("The answer is Correct.");
-  const wrongAnswerNotifier = () => toast.error("The anser is Wrong !!!");
+  const correcAnswerNotifier = () => toast.success("Your answer is Correct.");
+  const wrongAnswerNotifier = () => toast.error("Your answer is Wrong !!!");
 
   return (
     <div className="flex justify-center my-5">
