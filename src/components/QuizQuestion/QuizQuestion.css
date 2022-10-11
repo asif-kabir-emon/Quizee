@@ -4,3 +4,15 @@
   justify-content: center;
   display: block;
 }
+/* 
+@media screen and (width: 900px) {
+  .quiz-question-option {
+    width: 600px;
+  }
+}
+
+@media screen and (width: 700px) {
+  .quiz-question-option {
+    width: 400px;
+  }
+} */
