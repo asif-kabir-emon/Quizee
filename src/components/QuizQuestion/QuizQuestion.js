@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 const QuizQuestion = ({ quizQuestion }) => {
   const { question, options, id, correctAnswer } = quizQuestion;
   const parse = require("html-react-parser");
-  const answerNotifier = () => toast(correctAnswer);
+  const answerNotifier = () => toast(`Answer: ${correctAnswer}`);
   const correcAnswerNotifier = () => toast.success("Your answer is Correct.");
   const wrongAnswerNotifier = () => toast.error("Your answer is Wrong !!!");
 
