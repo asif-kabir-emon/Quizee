@@ -3,7 +3,7 @@ import { EyeIcon } from "@heroicons/react/24/solid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const QuizQuestion = ({ quizQuestion }) => {
+const QuizQuestion = ({ quizQuestion, index }) => {
   const { question, options, id, correctAnswer } = quizQuestion;
   const parse = require("html-react-parser");
   const answerNotifier = () => toast(`Answer: ${correctAnswer}`);
@@ -12,8 +12,13 @@ const QuizQuestion = ({ quizQuestion }) => {
 
   return (
     <div className="flex justify-center my-5">
-      <div className="bg-slate-200 p-6 rounded-md md:w-3/4 lg:w-1/2 m-4">
-        <div className="flex justify-between items-center">
+      <div className="bg-slate-200 p-6 rounded-md md:w-3/4 lg:w-1/2 m-4 ">
+        <div className="text-left">
+          <span className=" bg-red-600 text-white px-2 py-1">
+            Question - {index}
+          </span>
+        </div>
+        <div className="flex justify-between tems-center">
           <div className="text-base md:text-2xl my-3 text-left md:text-center">
             {parse(question)}
           </div>
