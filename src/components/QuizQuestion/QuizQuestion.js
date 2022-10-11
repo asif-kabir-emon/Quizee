@@ -9,11 +9,11 @@ const QuizQuestion = ({ quizQuestion }) => {
   const parse = require("html-react-parser");
   const answerNotifier = () => toast(correctAnswer);
   const correcAnswerNotifier = () => toast.success("The answer is Correct.");
-  const wrongAnswerNotifier = () => toast.success("The anser is Wrong !!!");
+  const wrongAnswerNotifier = () => toast.error("The anser is Wrong !!!");
 
   return (
     <div className="flex justify-center my-5">
-      <div className="bg-slate-200 p-6 rounded-md quiz-question-option m-4">
+      <div className="bg-slate-200 p-6 rounded-md md:w-3/4 lg:w-1/2 m-4">
         <div className="flex justify-between items-center">
           <div className="text-base md:text-2xl my-3 text-left md:text-center">
             {parse(question)}
@@ -35,8 +35,8 @@ const QuizQuestion = ({ quizQuestion }) => {
                 className="mr-2"
                 onClick={() =>
                   correctAnswer === option
-                    ? { correcAnswerNotifier }
-                    : { wrongAnswerNotifier }
+                    ? correcAnswerNotifier()
+                    : wrongAnswerNotifier()
                 }
               />
               {option}

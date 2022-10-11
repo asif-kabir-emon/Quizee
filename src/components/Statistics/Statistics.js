@@ -16,8 +16,8 @@ const Statistics = () => {
 
   return (
     <div className=" mt-28">
-      <h1 className="text-xl text-center mb-5 ">
-        Total Number of questions in quiz based on evey topic
+      <h1 className="text-xl text-center mb-5">
+        Total Number of Questions in Quiz based on every Topic
       </h1>
       <div className="flex justify-center">
         <BarChart
