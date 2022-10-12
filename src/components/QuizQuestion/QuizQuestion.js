@@ -15,7 +15,7 @@ const QuizQuestion = ({ quizQuestion, index }) => {
       <div className="bg-slate-200 p-6 rounded-md md:w-3/4 lg:w-1/2 m-4 ">
         <div className="text-left">
           <span className=" bg-red-600 text-white px-2 py-1">
-            Question - {index}
+            Question - {index + 1}
           </span>
         </div>
         <div className="flex justify-between tems-center">
